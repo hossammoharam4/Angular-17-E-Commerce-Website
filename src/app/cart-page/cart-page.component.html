@@ -1,0 +1,259 @@
+<div class="product-big-title-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="product-bit-title text-center">
+          <h2>Shopping Cart</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Page title area -->
+
+<div class="single-product-area">
+  <div class="zigzag-bottom"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- <div class="single-sidebar">
+          <h2 class="sidebar-title">Search Products</h2>
+          <form action="">
+            <input type="text" placeholder="Search products..." />
+            <input type="submit" value="Search" />
+          </form>
+        </div> -->
+
+        <div class="single-sidebar">
+          <h2 class="sidebar-title">Products</h2>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/7.png"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/7">NOW Foods Echinacea Root 400 mg 100 Softgels</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$400.00</ins> <del>$475.00</del>
+            </div>
+            
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/3.jpg"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/3">Cetaphil Oily Skin Cleanser</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$350.00</ins> <del>$450.00</del>
+            </div>
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/12.jpg"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/12">Medex Multivitamin Junior</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$100.00</ins> <del>$160.00</del>
+            </div>
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/10.png"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/10">Vidrop Vitamin Drop</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$100.00</ins> <del>$135.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="product-content-right">
+          <div class="woocommerce">
+            @if(cart.items.length==0) {
+              <div class="text-center">
+                Your Cart Is Empty!Add Some
+                <a routerLink="/products"> Products</a>
+              </div>
+              }@else{
+            <form method="post" action="#">
+           
+              <table cellspacing="0" class="table-responsive shop_table cart">
+                <thead>
+                  <tr>
+                    <th class="product-remove">&nbsp;</th>
+                    <th class="product-thumbnail">&nbsp;</th>
+                    <th class="product-name">Product</th>
+                    <th class="product-price">Price</th>
+                    <th class="product-quantity">Quantity</th>
+                    <th class="product-subtotal">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for(cartItem of cart.items ; track cartItem.id){
+                  <tr class="cart_item">
+                    <td class="product-remove">
+                      <a
+                        title="Remove this item"
+                        class="remove"
+                        (click)="deleteCartItemById(cartItem.id)"
+                        >×</a>
+                    </td>
+
+                    <td class="product-thumbnail">
+                      <a routerLink="/product">
+                        <img
+                          width="145"
+                          height="145"
+                          alt="poster_1_up"
+                          class="shop_thumbnail"
+                          src="{{ cartItem.product.photo }}"
+                      /></a>
+                    </td>
+
+                    <td class="product-name">
+                      <a routerLink="/product/{{ cartItem.product.id }}">{{
+                        cartItem.product.title
+                      }}</a>
+                    </td>
+
+                    <td class="product-price">
+                      <span class="amount">{{
+                        cartItem.product.Price | currency
+                      }}</span>
+                    </td>
+
+                    <td class="product-quantity">
+                      <div class="quantity buttons_added">
+                        <input
+                          type="button"
+                          class="minus"
+                          value="-"
+                          (click)="
+                            cartItem.quantity > 1
+                              ? (cartItem.quantity = cartItem.quantity - 1)
+                              : 1
+                          "
+                        />
+                        <input
+                          type="number"
+                          size="4"
+                          class="input-text qty text"
+                          title="Qty"
+                          value="{{ cartItem.quantity }}"
+                          min="1"
+                          step="1"
+                          #qnty
+                          (change)="updateQuantitiy(cartItem.id, qnty.value)"
+                        />
+                        <input
+                          type="button"
+                          class="plus"
+                          value="+"
+                          (click)="
+                            cartItem.quantity < 4
+                              ? (cartItem.quantity = cartItem.quantity + 1)
+                              : 4
+                          "
+                        />
+                      </div>
+                    </td>
+
+                    <td class="product-subtotal">
+                      <span class="amount">{{
+                        cartItem.price | currency
+                      }}</span>
+                    </td>
+                  </tr>
+                  }
+
+                  <tr>
+                    <td class="actions" colspan="6">
+                      <!-- <div class="coupon">
+                        <label for="coupon_code">Coupon:</label>
+                        <input
+                          type="text"
+                          placeholder="Coupon code"
+                          value=""
+                          id="coupon_code"
+                          class="input-text"
+                          name="coupon_code"
+                        />
+                        <input
+                          type="submit"
+                          value="Apply Coupon"
+                          name="apply_coupon"
+                          class="button"
+                        />
+                      </div> -->
+                      <div class="break"></div>
+                      <!-- break -->
+                      <div class="submitcart">
+                        <!-- <input
+                          type="submit"
+                          value="Update Cart"
+                          name="update_cart"
+                          class="button update_cart-button"
+                        /> -->
+                        <input
+                          routerLink="/checkout"
+                          type="submit"
+                          value="Checkout"
+                          name="proceed"
+                          class="button checkout-button alt wc-forward"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+           
+            </form>
+
+            <div class="cart-collaterals">
+              <div class="cart_totals">
+                <h2>Cart Totals</h2>
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr class="cart-subtotal">
+                      <th>Cart Subtotal</th>
+                      <td>
+                        <span class="amount">{{
+                          cart.totalPrice | currency
+                        }}</span>
+                      </td>
+                    </tr>
+
+                    <tr class="shipping">
+                      <th>Shipping and Handling</th>
+                      <td>Free Shipping</td>
+                    </tr>
+
+                    <tr class="order-total">
+                      <th>Order Total</th>
+                      <td>
+                        <strong
+                          ><span class="amount">{{
+                            cart.totalPrice | currency
+                          }}</span></strong
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>   }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

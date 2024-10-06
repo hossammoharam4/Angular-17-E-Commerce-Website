@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "mariam",
+      "password": "password123",
+      "isadmin": 0
+    },
+    {
+      "id": "2",
+      "username": "asmaa",
+      "password": "securePass456",
+      "isadmin": 0
+    },
+    {
+      "id": "3",
+      "username": "hossam",
+      "password": "12345",
+      "isadmin": 1
+    },
+    {
+      "id": "4",
+      "username": "khaled",
+      "password": "123",
+      "isadmin": 0
+    }
+  ]
+}

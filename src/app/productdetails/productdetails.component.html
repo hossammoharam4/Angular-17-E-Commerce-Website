@@ -1,0 +1,203 @@
+<div class="single-product-area">
+  <div class="zigzag-bottom"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- <div class="single-sidebar">
+          <h2 class="sidebar-title">Search Products</h2>
+          <form action="">
+            <input type="text" placeholder="Search products..." />
+            <input type="submit" value="Search" />
+          </form>
+        </div> -->
+        
+
+        <div class="single-sidebar">
+          <h2 class="sidebar-title">Products</h2>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/7.png"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2> <a href="./product/7">NOW Foods Echinacea Root 400 mg 100 Softgels</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$400.00</ins> <del>$475.00</del>
+            </div>
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/3.jpg"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/3">Cetaphil Oily Skin Cleanser</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$350.00</ins> <del>$450.00</del>
+            </div>
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/12.jpg"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/12">Medex Multivitamin Junior</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$100.00</ins> <del>$160.00</del>
+            </div>
+          </div>
+          <div class="thubmnail-recent">
+            <img
+              src="../../assets/img/10.png"
+              class="recent-thumb"
+              alt=""
+            />
+            <h2><a href="./product/10">Vidrop Vitamin Drop</a></h2>
+            <div class="product-sidebar-price">
+              <ins>$100.00</ins> <del>$135.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="product-content-right">
+          <!-- <div class="product-breadcroumb">
+            <a href="">Home</a>
+            <a href="">Category Name</a>
+            <a href="">Man</a>
+          </div> -->
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="product-images">
+                <div class="product-main-img">
+                  <img src="{{ product?.photo }}" alt="" class="product" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="product-inner">
+                <h2 class="product-name">{{ product?.title }}</h2>
+                <div class="product-inner-price">
+                  <ins>{{ product?.Price | currency }}</ins>
+                  <del>{{ product?.discount | currency }}</del>
+                </div>
+
+                <form action="" class="cart">
+                  <div class="quantity">
+                    <input
+                      type="number"
+                      size="4"
+                      class="input-text qty text"
+                      title="Qty"
+                      [(ngModel)]="quantity"
+                      name="quantity"
+                      min="1"
+                      step="1"
+                    />
+                  </div>
+                  
+                  <button
+                    class="add_to_cart_button"
+                    type="submit"
+                    routerLink="/cart"
+                    (click)="addCartItem(product)"
+                  >
+                    Add to cart
+                  </button>
+                </form>
+
+                <!-- <div class="product-inner-category">
+                  <p>
+                    Category: <a href="">Man</a>. Tags:
+                    <a href="">Man</a>, <a href="">Women</a>,
+                    <a href="">Baby</a>, <a href="">Animal</a>.
+                  </p>
+                </div> -->
+
+                <div role="tabpanel">
+                  <ul class="product-tab" role="tablist">
+                    <li role="presentation" class="active">
+                      <a
+                        href="#home"
+                        aria-controls="home"
+                        role="tab"
+                        data-toggle="tab"
+                        >Description</a
+                      >
+                    </li>
+                    <!-- <li role="presentation">
+                      <a
+                        href="#profile"
+                        aria-controls="profile"
+                        role="tab"
+                        data-toggle="tab"
+                        >Reviews</a
+                      >
+                    </li> -->
+                  </ul>
+                  <div class="tab-content">
+                    <div
+                      role="tabpanel"
+                      class="tab-pane fade in active"
+                      id="home"
+                    >
+                      <h2>Product Description</h2>
+                      <p>{{ product?.detail }}</p>
+                    </div>
+                    <!-- <div role="tabpanel" class="tab-pane fade" id="profile">
+                      <h2>Reviews</h2>
+                      <div class="submit-review">
+                        <p>
+                          <label for="name">Name</label>
+                          <input name="name" type="text" />
+                        </p>
+                        <p>
+                          <label for="email">Email</label>
+                          <input name="email" type="email" />
+                        </p>
+                        <div class="rating-chooser">
+                          <p>Your rating</p>
+
+                          <div class="rating-wrap-post">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                        </div>
+                        <p>
+                          <label for="review">Your review</label>
+                          <textarea
+                            name="review"
+                            id=""
+                            cols="30"
+                            rows="10"
+                          ></textarea>
+                        </p>
+                        <p><input type="submit" value="Submit" /></p>
+                      </div>
+                    </div> 
+                  </div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="related-products-wrapper">
+            <h2 class="related-products-title">Related Products</h2>
+            <div class="related-products-carousel">
+              <app-latest-products
+                (ShowDetailsClicked)="onShowDetailsClicked($event)"
+                [count]="slideConfigRelatedProducts"
+              ></app-latest-products>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+a{ text-decoration: none}
+.logoslick-prev,
+.logoslick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.logoslick-prev {
+  left: -40px; /* Adjust this value based on your layout */
+}
+
+.logoslick-next {
+  right: -40px; /* Adjust this value based on your layout */
+}
+
+.logoslick-prev:hover,
+.logoslick-next:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  color: #fff;
+}
+
+.logoslick-prev:focus,
+.logoslick-next:focus {
+  outline: none;
+}
+
+.logoslick-prev i,
+.logoslick-next i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+@media (max-width: 768px) {
+  .logoslick-prev,
+  .logoslick-next {
+    left: 10px;
+    right: 10px;
+  }
+}

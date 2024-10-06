@@ -1,0 +1,24 @@
+.admin-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+  }
+  
+  .admin-container h2 {
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .alert {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .card-header {
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  

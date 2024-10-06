@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Bioderma Sebium Gel Moussant Foaming",
+      "detail": "Sébium Foaming Gel gently cleanses and purifies the skin without drying it : containing zinc and copper sulphates, it cleanses the epidermis, reduces the appearance of irregularities, and absorbs excess of sebum.",
+      "Price": 300,
+      "discount": 345,
+      "photo": "../../assets/img/1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Neutrogena Spot Controlling Facial Wash",
+      "detail": "Neutrogena Spot Controlling Oil-free Facial Wash is a clinically-proven oil-free formula with Salicylic Acid that helps tackle stubborn spots and helps prevent future breakouts.",
+      "Price": 376,
+      "discount": 400,
+      "photo": "../../assets/img/2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Cetaphil Oily Skin Cleanser",
+      "detail": "Cetaphil Oily Skin Cleanser is a gentle| effective way to cleanse your skin every day.",
+      "Price": 350,
+      "discount": 450,
+      "photo": "../../assets/img/3.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Garnier Skin Active Micellar Cleansing Water",
+      "detail": "The all in one solution for all skin types including sensitive skin.  Suitable for face, eyes and lips.",
+      "Price": 150,
+      "discount": 200,
+      "photo": "../../assets/img/4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Babywell Baby Milk Stage",
+      "detail": "Babywell Baby Milk Stage 3 provides essential nutrients that ensure your toddler gets everything they need to grow. It is ideal for children who are at least 12 months old and are no longer feeling from the stage 2 formula.",
+      "Price": 100,
+      "discount": 150,
+      "photo": "../../assets/img/5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Holland And Barrett Hair",
+      "detail": "Holland & Barrett Hair Gummies contain a powerful blend of nutrients, vitamins, and minerals to help support healthy hair, including Biotin, Selenium and Zinc.",
+      "Price": 50,
+      "discount": 60,
+      "photo": "../../assets/img/6.png"
+    },
+    {
+      "id": "7",
+      "title": "NOW Foods Echinacea Root",
+      "detail": "Echinacea (purple coneflower) was once widely used by Native Americans and is now used by millions of consumers worldwide.",
+      "Price": 400,
+      "discount": 475,
+      "photo": "../../assets/img/7.png"
+    },
+    {
+      "id": "8",
+      "title": "Beatswell Collagen",
+      "detail": "It plays a central role in strengthening skin plus benefits elasticity and hydration.",
+      "Price": 500,
+      "discount": 560,
+      "photo": "../../assets/img/8.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Carlson Kid's Vitamin",
+      "detail": "Supports cardiovascular and bone health",
+      "Price": 150,
+      "discount": 190,
+      "photo": "../../assets/img/9.png"
+    },
+    {
+      "id": "10",
+      "title": "Vidrop Vitamin Drop",
+      "detail": "Vidrop is a vitamin D3 which regulate calcium and phosphate metabolism , its main function is synthesizing the carrier protein (Calbindin) which mediates the intestinal calcium absorptionby an active transport mechanism.",
+      "Price": 100,
+      "discount": 135,
+      "photo": "../../assets/img/10.png"
+    },
+    {
+      "id": "11",
+      "title": "Carlson Baby's Vitamin",
+      "detail": "The American Academy of Pediatrics recommends that infants receive 400 IU of vitamin D3 daily.",
+      "Price": 150,
+      "discount": 185,
+      "photo": "../../assets/img/11.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Medex Multivitamin Junior",
+      "detail": "For children 1+ in order to maintain the daily level of the most important vitamins necessary for growth and development",
+      "Price": 100,
+      "discount": 160,
+      "photo": "../../assets/img/12.jpg"
+    },
+    {
+      "id": "13",
+      "title": "centrum silver",
+      "detail": "multi vietamin",
+      "Price": 250,
+      "color": "",
+      "discount": 350,
+      "photo": "https://vitazonei.com/public/uploads/all/Y9zSkQxZKf4lHMo6ucfwAYAS6XCd7uVgJhEsLxXu.jpg"
+    }
+  ]
+}
