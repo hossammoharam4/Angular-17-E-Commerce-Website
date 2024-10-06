@@ -1,0 +1,67 @@
+{
+  "hash": "886a7e91",
+  "configHash": "44b49761",
+  "lockfileHash": "b717afdb",
+  "browserHash": "8f31f830",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "a7bd40e2",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "60a2844e",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "49cf110b",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "0ec021de",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "376863a0",
+      "needsInterop": false
+    },
+    "ngx-owl-carousel-o": {
+      "src": "../../../../../node_modules/ngx-owl-carousel-o/fesm2022/ngx-owl-carousel-o.mjs",
+      "file": "ngx-owl-carousel-o.js",
+      "fileHash": "d3209983",
+      "needsInterop": false
+    },
+    "ngx-slick-carousel": {
+      "src": "../../../../../node_modules/ngx-slick-carousel/fesm2022/ngx-slick-carousel.mjs",
+      "file": "ngx-slick-carousel.js",
+      "fileHash": "72843d1f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-S7XEEA4A": {
+      "file": "chunk-S7XEEA4A.js"
+    },
+    "chunk-B3SK4OML": {
+      "file": "chunk-B3SK4OML.js"
+    },
+    "chunk-PHGYUWTN": {
+      "file": "chunk-PHGYUWTN.js"
+    },
+    "chunk-M46JLRDF": {
+      "file": "chunk-M46JLRDF.js"
+    },
+    "chunk-FREGN265": {
+      "file": "chunk-FREGN265.js"
+    }
+  }
+}
